@@ -41,7 +41,7 @@ namespace Demo_Adonet_Project
             dtgCategory.DataSource = dataTable;
             connection.Close();
 
-            //overload
+            //overload     
         }
 
         private void btnSave_Click(object sender, EventArgs e)

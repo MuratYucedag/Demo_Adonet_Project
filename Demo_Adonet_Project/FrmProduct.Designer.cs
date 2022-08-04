@@ -48,7 +48,7 @@
             this.btnSearchForStockLess = new System.Windows.Forms.Button();
             this.btnSearchForStockMore = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.rdbActive = new System.Windows.Forms.RadioButton();
             this.rdbPassive = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -184,6 +184,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Ürünü Kaydet";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // brnDelete
             // 
@@ -194,6 +195,7 @@
             this.brnDelete.TabIndex = 16;
             this.brnDelete.Text = "Ürünü Sil";
             this.brnDelete.UseVisualStyleBackColor = true;
+            this.brnDelete.Click += new System.EventHandler(this.brnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -204,6 +206,7 @@
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Ürünü Düzenle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSearchForProductName
             // 
@@ -214,6 +217,7 @@
             this.btnSearchForProductName.TabIndex = 18;
             this.btnSearchForProductName.Text = "Ara: Ürün Adı";
             this.btnSearchForProductName.UseVisualStyleBackColor = true;
+            this.btnSearchForProductName.Click += new System.EventHandler(this.btnSearchForProductName_Click);
             // 
             // btnSearchForStockLess
             // 
@@ -224,6 +228,7 @@
             this.btnSearchForStockLess.TabIndex = 19;
             this.btnSearchForStockLess.Text = "Ara: Stok <";
             this.btnSearchForStockLess.UseVisualStyleBackColor = true;
+            this.btnSearchForStockLess.Click += new System.EventHandler(this.btnSearchForStockLess_Click);
             // 
             // btnSearchForStockMore
             // 
@@ -234,6 +239,7 @@
             this.btnSearchForStockMore.TabIndex = 20;
             this.btnSearchForStockMore.Text = "Ara: Stok >";
             this.btnSearchForStockMore.UseVisualStyleBackColor = true;
+            this.btnSearchForStockMore.Click += new System.EventHandler(this.btnSearchForStockMore_Click);
             // 
             // dataGridView1
             // 
@@ -244,14 +250,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(669, 251);
             this.dataGridView1.TabIndex = 21;
             // 
-            // comboBox1
+            // cmbCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 191);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 27);
-            this.comboBox1.TabIndex = 22;
+            this.cmbCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(98, 191);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(198, 27);
+            this.cmbCategory.TabIndex = 22;
             // 
             // rdbActive
             // 
@@ -284,7 +290,7 @@
             this.ClientSize = new System.Drawing.Size(1177, 290);
             this.Controls.Add(this.rdbPassive);
             this.Controls.Add(this.rdbActive);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSearchForStockMore);
             this.Controls.Add(this.btnSearchForStockLess);
@@ -307,6 +313,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmProduct";
             this.Text = "Ürün Formu";
+            this.Load += new System.EventHandler(this.FrmProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,7 +342,7 @@
         private System.Windows.Forms.Button btnSearchForStockLess;
         private System.Windows.Forms.Button btnSearchForStockMore;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.RadioButton rdbActive;
         private System.Windows.Forms.RadioButton rdbPassive;
     }

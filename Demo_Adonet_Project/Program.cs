@@ -16,7 +16,7 @@ namespace Demo_Adonet_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProduct());
+            Application.Run(new FrmRegister());
         }
     }
 }
